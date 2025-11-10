@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Inteligencias Múltiples (Evaluado)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .question-container {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .question-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .buttons-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        #results-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            border: 1px solid #00bcd4;
+        }
+        #results-container h2 {
+            color: #00796b;
+            margin-top: 0;
+        }
+        #im-profile-table, #im-dominante {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        #im-profile-table th, #im-profile-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #im-profile-table th {
+            background-color: #b2ebf2;
+        }
+        #im-dominante td {
+            font-size: 1.1em;
+            font-weight: bold;
+            background-color: #ffeb3b; /* Amarillo llamativo */
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cuestionario de Inteligencias Múltiples de Gardner</h1>
+    <p>Selecciona **Sí** si la afirmación te describe generalmente, o **No** en caso contrario.</p>
+
+    <form id="im-quiz-form">
+        
+        <div class="question-container">
+            <label>1. Prefiero hacer un mapa que explicarle a alguien cómo tiene que llegar.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q1" value="Sí" required> Sí
+                <input type="radio" name="q1" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>2. Si estoy enojado(a) o contento(a) generalmente sé exactamente por qué.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q2" value="Sí" required> Sí
+                <input type="radio" name="q2" value="No"> No
+            </div>
+        </div>
+        
+        <div class="question-container">
+            <label>3. Sé tocar (o antes sabía tocar) un instrumento musical.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q3" value="Sí" required> Sí
+                <input type="radio" name="q3" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>4. Asocio la música con mis estados de ánimo.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q4" value="Sí" required> Sí
+                <input type="radio" name="q4" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>5. Puedo sumar o multiplicar mentalmente con mucha rapidez.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q5" value="Sí" required> Sí
+                <input type="radio" name="q5" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>6. Puedo ayudar a un amigo a manejar sus sentimientos porque yo lo pude hacer antes en relación a sentimientos parecidos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q6" value="Sí" required> Sí
+                <input type="radio" name="q6" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>7. Me gusta trabajar con calculadoras y computadores.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q7" value="Sí" required> Sí
+                <input type="radio" name="q7" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>8. Aprendo rápido a bailar un baile nuevo.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q8" value="Sí" required> Sí
+                <input type="radio" name="q8" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>9. No me es difícil decir lo que pienso en el curso de una discusión o debate.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q9" value="Sí" required> Sí
+                <input type="radio" name="q9" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>10. Disfruto de una buena charla, discurso o sermón.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q10" value="Sí" required> Sí
+                <input type="radio" name="q10" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>11. Siempre distingo el norte del sur, esté donde esté.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q11" value="Sí" required> Sí
+                <input type="radio" name="q11" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>12. Me gusta reunir grupos de personas en una fiesta o en un evento especial.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q12" value="Sí" required> Sí
+                <input type="radio" name="q12" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>13. La vida me parece vacía sin música.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q13" value="Sí" required> Sí
+                <input type="radio" name="q13" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>14. Siempre entiendo los gráficos que vienen en las instrucciones de equipos o instrumentos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q14" value="Sí" required> Sí
+                <input type="radio" name="q14" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>15. Me gusta hacer puzzles y entretenerme con juegos electrónicos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q15" value="Sí" required> Sí
+                <input type="radio" name="q15" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>16. Me fue fácil aprender a andar en bicicleta. (o patines)</label>
+            <div class="buttons-group">
+                <input type="radio" name="q16" value="Sí" required> Sí
+                <input type="radio" name="q16" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>17. Me enojo cuando oigo una discusión o una afirmación que parece ilógica.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q17" value="Sí" required> Sí
+                <input type="radio" name="q17" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>18. Soy capaz de convencer a otros que sigan mis planes.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q18" value="Sí" required> Sí
+                <input type="radio" name="q18" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>19. Tengo buen sentido de equilibrio y coordinación.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q19" value="Sí" required> Sí
+                <input type="radio" name="q19" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>20. Con frecuencia veo configuraciones y relaciones entre números con más rapidez y facilidad que otros.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q20" value="Sí" required> Sí
+                <input type="radio" name="q20" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>21. Me gusta construir modelos (hacer esculturas).</label>
+            <div class="buttons-group">
+                <input type="radio" name="q21" value="Sí" required> Sí
+                <input type="radio" name="q21" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>22. Tengo agudeza para encontrar el significado de las palabras.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q22" value="Sí" required> Sí
+                <input type="radio" name="q22" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>23. Puedo mirar un objeto de una manera y con la misma facilidad verlo (reflejarlo) de otra.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q23" value="Sí" required> Sí
+                <input type="radio" name="q23" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>24. Con frecuencia hago la conexión entre una pieza de música y algún evento de mi vida.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q24" value="Sí" required> Sí
+                <input type="radio" name="q24" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>25. Me gusta trabajar con números y figuras.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q25" value="Sí" required> Sí
+                <input type="radio" name="q25" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>26. Me gusta sentarme silenciosamente y reflexionar sobre mis sentimientos íntimos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q26" value="Sí" required> Sí
+                <input type="radio" name="q26" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>27. Con solo mirar la forma de construcciones y estructuras me siento a gusto.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q27" value="Sí" required> Sí
+                <input type="radio" name="q27" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>28. Me gusta tararear, silbar y cantar en la ducha o cuando estoy sola.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q28" value="Sí" required> Sí
+                <input type="radio" name="q28" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>29. Soy bueno(a) para el atletismo.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q29" value="Sí" required> Sí
+                <input type="radio" name="q29" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>30. Me gusta escribir cartas detalladas a mis amigos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q30" value="Sí" required> Sí
+                <input type="radio" name="q30" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>31. Generalmente me doy cuenta de la expresión que tengo en la cara.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q31" value="Sí" required> Sí
+                <input type="radio" name="q31" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>32. Me doy cuenta de las expresiones en la cara de otras personas.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q32" value="Sí" required> Sí
+                <input type="radio" name="q32" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>33. Me mantengo "en contacto" con mis estados de ánimo. No me cuesta identificarlos.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q33" value="Sí" required> Sí
+                <input type="radio" name="q33" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>34. Me doy cuenta de los estados de ánimo de otros.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q34" value="Sí" required> Sí
+                <input type="radio" name="q34" value="No"> No
+            </div>
+        </div>
+
+        <div class="question-container">
+            <label>35. Me doy cuenta bastante bien de lo que otros piensan de mí.</label>
+            <div class="buttons-group">
+                <input type="radio" name="q35" value="Sí" required> Sí
+                <input type="radio" name="q35" value="No"> No
+            </div>
+        </div>
+
+        <button type="submit">Calcular Mi Perfil de Inteligencias</button>
+    </form>
+
+    <div id="results-container" style="display:none;">
+        <h2>Resultado de tu Perfil de Inteligencias Múltiples</h2>
+        
+        <table id="im-dominante">
+            <thead>
+                <tr>
+                    <th>Tu Inteligencia Dominante (o las más desarrolladas) es/son:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="dominant-im-result"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Puntuación Detallada (Respuestas "Sí" por Inteligencia)</h3>
+        <table id="im-profile-table">
+            <thead>
+                <tr>
+                    <th>Inteligencia</th>
+                    <th>Puntuación</th>
+                    <th>Máximo</th>
+                </tr>
+            </thead>
+            <tbody id="im-scores-body">
+                </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Mapeo de las preguntas a las 7 Inteligencias Múltiples (IM)
+        const IM_MAP = {
+            'Lingüística': [9, 10, 22, 30],         // Max 4
+            'Lógico-Matemática': [5, 7, 15, 17, 20, 25], // Max 6
+            'Viso-Espacial': [1, 11, 14, 21, 23, 27],  // Max 6
+            'Musical': [3, 4, 13, 24, 28],          // Max 5
+            'Corporal-Kinestésica': [8, 16, 19, 29], // Max 4
+            'Interpersonal': [6, 12, 18, 32, 34, 35], // Max 6
+            'Intrapersonal': [2, 26, 31, 33]       // Max 4
+        };
+
+        const form = document.getElementById('im-quiz-form');
+        const resultsContainer = document.getElementById('results-container');
+        const scoresBody = document.getElementById('im-scores-body');
+        const dominantResult = document.getElementById('dominant-im-result');
+        const TOTAL_QUESTIONS = 35;
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            // 1. Verificar si todas las preguntas fueron respondidas
+            let allAnswered = true;
+            const answers = {};
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                const questionName = 'q' + i;
+                const selected = form.elements[questionName].value;
+                if (!selected) {
+                    allAnswered = false;
+                    break;
+                }
+                answers[i] = selected; // Almacena la respuesta ("Sí" o "No")
+            }
+
+            if (!allAnswered) {
+                alert('Por favor, responde todas las 35 preguntas antes de finalizar.');
+                return;
+            }
+
+            // 2. Calcular la puntuación de cada inteligencia
+            const imScores = {};
+            let maxScore = -1;
+            
+            for (const imName in IM_MAP) {
+                const questions = IM_MAP[imName];
+                const score = questions.reduce((currentScore, qNum) => {
+                    // Si la respuesta es "Sí", suma 1 punto
+                    if (answers[qNum] === 'Sí') {
+                        return currentScore + 1;
+                    }
+                    return currentScore;
+                }, 0);
+
+                imScores[imName] = { 
+                    score: score,
+                    max: questions.length
+                };
+                
+                // Determinar la puntuación máxima obtenida
+                if (score > maxScore) {
+                    maxScore = score;
+                }
+            }
+
+            // 3. Determinar las inteligencias dominantes
+            const dominantIM = [];
+            for (const imName in imScores) {
+                if (imScores[imName].score === maxScore && maxScore > 0) {
+                    dominantIM.push(imName);
+                }
+            }
+            
+            // 4. Mostrar Resultados
+            scoresBody.innerHTML = ''; // Limpia resultados anteriores
+
+            // Rellenar tabla detallada
+            for (const imName in imScores) {
+                const { score, max } = imScores[imName];
+                const newRow = scoresBody.insertRow();
+                newRow.insertCell(0).textContent = imName;
+                newRow.insertCell(1).textContent = score;
+                newRow.insertCell(2).textContent = max;
+                if (score === maxScore && maxScore > 0) {
+                    newRow.style.backgroundColor = '#fff9c4'; // Resaltar dominante
+                }
+            }
+            
+            // Rellenar resultado dominante
+            if (dominantIM.length > 0) {
+                dominantResult.textContent = dominantIM.join(' y ');
+            } else {
+                dominantResult.textContent = 'No se pudo determinar una inteligencia dominante clara (todas las puntuaciones fueron bajas o iguales a cero).';
+            }
+
+
+            resultsContainer.style.display = 'block';
+            resultsContainer.scrollIntoView({ behavior: 'smooth' }); // Lleva al usuario a los resultados
+        });
+    </script>
+
+</body>
+</html>
